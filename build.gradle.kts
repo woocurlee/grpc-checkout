@@ -41,6 +41,9 @@ subprojects {
         testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
         implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+        testImplementation("io.kotest:kotest-assertions-core:6.1.7")
+        testImplementation("io.mockk:mockk:1.14.9")
     }
 
     kotlin {

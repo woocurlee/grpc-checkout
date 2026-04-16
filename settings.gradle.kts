@@ -5,6 +5,7 @@ include("payment")
 include("coupon")
 include("product")
 include("checkout")
+include("proto")
 
 pluginManagement {
     repositories {

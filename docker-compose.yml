@@ -49,8 +49,17 @@ services:
     volumes:
       - payment-db-data:/var/lib/postgresql/data
 
+  redis:
+    image: redis:7
+    container_name: grpc-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
 volumes:
   user-db-data:
   product-db-data:
   coupon-db-data:
   payment-db-data:
+  redis-data:

@@ -19,6 +19,16 @@ message CheckStockResponse {
   int32 total_price = 2;
 }
 
-service StockService {
+message DeductStockRequest {
+  repeated StockProduct products = 1;
+  int64 user_id = 2;
+}
+
+message DeductStockResponse {
+  bool is_success = 1;
+}
+
+service ProductService {
   rpc CheckStock (CheckStockRequest) returns (CheckStockResponse);
+  rpc DeductStock (DeductStockRequest) returns (DeductStockResponse);
 }

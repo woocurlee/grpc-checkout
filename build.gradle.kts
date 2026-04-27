@@ -70,6 +70,7 @@ subprojects {
             testImplementation("io.mockk:mockk:1.14.9")
 
             implementation("org.postgresql:postgresql:42.7.10")
+            implementation("org.redisson:redisson:3.45.1")
         }
 
         kotlin {
